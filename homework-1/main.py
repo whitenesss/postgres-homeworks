@@ -30,3 +30,4 @@ def add_sql_bd(file, b):
 
 if __name__ == '__main__':
     add_sql_bd(file, sql_bd)
+    print()
