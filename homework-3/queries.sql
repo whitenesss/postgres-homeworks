@@ -22,7 +22,7 @@ SELECT products.product_name, products.units_in_stock,suppliers.contact_name,sup
 FROM products
 JOIN suppliers
 ON products.supplier_id = suppliers.supplier_id
-WHERE discontinued = 0 AND units_in_stock > 25 AND category_id IN (SELECT category_id
+WHERE discontinued = 0 AND units_in_stock < 25 AND category_id IN (SELECT category_id
 																  from categories
 																  where category_name='Dairy Products' or category_name='Condiments')
 order by units_in_stock asc
